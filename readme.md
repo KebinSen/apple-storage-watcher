@@ -1,9 +1,8 @@
 # Apple Storage Watcher
 
 > 简陋版 苹果库存检查器
-> A really simple Apple Storage Watcher from commandline.
 
-支持监控iPhone 17系列的库存情况。
+支持监控iPhone的库存情况。
 
 ## 安装
 
@@ -16,8 +15,6 @@ npm install
 ```bash
 npm start
 ```
-
-> 注意：默认使用 `src/main.js` 作为入口文件。如果需要使用旧版本，请运行 `node src/index.js`
 
 ## 配置
 
@@ -42,7 +39,6 @@ npm start
 apple-storage-watcher/
 ├── src/
 │   ├── main.js          # 主入口文件
-│   ├── index.js         # 原始入口文件（备用）
 │   ├── utils/           # 工具函数
 │   │   └── consoleColors.js
 │   ├── config/          # 配置文件
@@ -51,3 +47,21 @@ apple-storage-watcher/
 ├── README.md            # 本文档
 └── package.json         # 项目配置
 ```
+
+## 功能说明
+
+本工具可以监控Apple产品在各门店的库存情况，当有货时会通过颜色标识并在控制台显示，同时播放提示音。
+
+## 配置说明
+
+### 产品型号配置
+
+在`src/config/models.js`文件中配置需要监控的产品型号。
+
+### 门店配置
+
+在`src/config/stores.js`文件中配置需要监控的门店信息。
+
+### 默认监控型号
+
+可以通过设置`defaultModels`数组来指定默认监控的型号，如果不设置则监控所有型号。
