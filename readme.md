@@ -3,29 +3,51 @@
 > 简陋版 苹果库存检查器
 > A really simple Apple Storage Watcher from commandline.
 
-## Installation 安装
+支持监控iPhone 17系列的库存情况。
+
+## 安装
 
 ```bash
 npm install
 ```
 
-## Usage 使用
+## 使用
 
 ```bash
 npm start
 ```
 
-## Configuration 配置
+> 注意：默认使用 `src/main.js` 作为入口文件。如果需要使用旧版本，请运行 `node src/index.js`
 
-- [Store Codes / 店铺编码](db/stores.md)
-- [Products Code / 产品编码](db/models.md)
+## 配置
 
-## 支持2种模式
-## 1.Interval 时钟频率
+- [门店配置](src/config/stores.js)
+- [产品型号配置](src/config/models.js)
 
-[Request Interval / 配置时钟频率](src/index.js#L64)
+## 支持的监控模式
 
-## 2.ScheduleJob 周期性定时运行
-[Request Schedule / 配置周期性定时运行](src/index.js#L150)
+### 1. 时间间隔模式
 
-### 使用 cron 设定 周期性定时运行，设置及验证规则可参考[cron在线解析](https://cron.qqe2.com/)
+在[src/main.js](src/main.js)中配置时钟频率。
+
+### 2. 定时任务模式
+
+在[src/main.js](src/main.js)中配置定时任务。
+
+使用 cron 设定周期性定时运行，设置及验证规则可参考[cron在线解析](https://cron.qqe2.com/)
+
+## 项目结构
+
+```
+apple-storage-watcher/
+├── src/
+│   ├── main.js          # 主入口文件
+│   ├── index.js         # 原始入口文件（备用）
+│   ├── utils/           # 工具函数
+│   │   └── consoleColors.js
+│   ├── config/          # 配置文件
+│   │   ├── models.js    # 产品型号配置
+│   │   └── stores.js    # 门店配置
+├── README.md            # 本文档
+└── package.json         # 项目配置
+```

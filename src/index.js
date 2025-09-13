@@ -1,5 +1,5 @@
 const http = require('superagent');
-const consoleColors = require('./console-colors');
+const consoleColors = require('./utils/consoleColors');
 const sound = require('sound-play');
 const schedule = require('node-schedule');
 
@@ -7,50 +7,44 @@ const schedule = require('node-schedule');
  * 要监听的型号
  */
 const models = {
-  // -----iPhone 15 Pro -----
+  // -----iPhone 17 Pro-----
 
-  // // iPhone 15 Pro 128GB
-  // 'MTQ63CH/A': '原色钛金属',
-  // 'MTQ73CH/A': '蓝色钛金属',
-  // 'MTQ53CH/A': '白色钛金属',
-  // 'MTQ43CH/A': '黑色钛金属',
+  // iPhone 17 Pro 256GB
+  'XXXXXCH/A': '星宇橙色',
+  'XXXXXCH/A': '深蓝色',
+  'XXXXXCH/A': '银色',
 
-  // // iPhone 15 Pro 256GB
-  // 'MTQA3CH/A': '原色钛金属',
-  // 'MTQC3CH/A': '蓝色钛金属',
-  // 'MTQ93CH/A': '白色钛金属',
-  // 'MTQ83CH/A': '黑色钛金属',
-  
-  // // iPhone 15 Pro 512GB
-  // 'MTQF3CH/A': '原色钛金属',
-  // 'MTQG3CH/A': '蓝色钛金属',
-  // 'MTQE3CH/A': '白色钛金属',
-  // 'MTQD3CH/A': '黑色钛金属',
-  
-  // // iPhone 15 Pro 1TB
-  // 'MTQK3CH/A': '原色钛金属',
-  // 'MTQL3CH/A': '蓝色钛金属',
-  // 'MTQJ3CH/A': '白色钛金属',
-  // 'MTQH3CH/A': '黑色钛金属',
+  // iPhone 17 Pro 512GB
+  'XXXXXCH/A': '星宇橙色',
+  'XXXXXCH/A': '深蓝色',
+  'XXXXXCH/A': '银色',
 
-  // -----iPhone 15 Pro Max-----
+  // iPhone 17 Pro 1TB
+  'XXXXXCH/A': '星宇橙色',
+  'XXXXXCH/A': '深蓝色',
+  'XXXXXCH/A': '银色',
 
-  // iPhone 15 Pro Max 256GB 
-  // 'MU2Q3CH/A': '原色钛金属',
-  // 'MU2R3CH/A': '蓝色钛金属',
-  // 'MU2P3CH/A': '白色钛金属',
-  // 'MU2N3CH/A': '黑色钛金属',
+  // -----iPhone 17 Pro Max-----
 
-  // // iPhone 15 Pro Max 512GB
-  // 'MU2V3CH/A': '原色钛金属',
-  'MU2W3CH/A': '蓝色钛金属',
-  // 'MU2U3CH/A': '白色钛金属',
-  // 'MU2T3CH/A': '黑色钛金属',
-  // // iPhone 15 Pro Max 1TB
-  // 'MU603CH/A': '原色钛金属',
-  // 'MU613CH/A': '蓝色钛金属',
-  // 'MU2Y3CH/A': '白色钛金属',
-  // 'MU2X3CH/A': '黑色钛金属',
+  // iPhone 17 Pro Max 256GB
+  'XXXXXCH/A': '星宇橙色',
+  'XXXXXCH/A': '深蓝色',
+  'XXXXXCH/A': '银色',
+
+  // iPhone 17 Pro Max 512GB
+  'XXXXXCH/A': '星宇橙色',
+  'XXXXXCH/A': '深蓝色',
+  'XXXXXCH/A': '银色',
+
+  // iPhone 17 Pro Max 1TB
+  'XXXXXCH/A': '星宇橙色',
+  'XXXXXCH/A': '深蓝色',
+  'XXXXXCH/A': '银色',
+
+  // iPhone 17 Pro Max 2TB
+  'XXXXXCH/A': '星宇橙色',
+  'XXXXXCH/A': '深蓝色',
+  'XXXXXCH/A': '银色',
 }
 
 const searchNearby = true;

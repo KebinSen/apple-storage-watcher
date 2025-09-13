@@ -1,0 +1,41 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install superagent@latest)",
+      "Bash(npm start)",
+      "Bash(git add .)",
+      "Bash(git restore --staged commit-message-short.txt commit-message.md)",
+      "Bash(git restore --staged commit-message-zh.txt)",
+      "Bash(git config user.email \"kevin@example.com\")",
+      "Bash(git config --list)",
+      "Bash(npm install cheerio)",
+      "Bash(node src/services/fetchModels.js)",
+      "Bash(curl -s https://www.apple.com.cn/shop/buy-iphone/iphone-17-pro/)",
+      "Bash(node src/main.js)",
+      "Bash(node src/services/analyzePage.js)",
+      "Bash(node src/services/extractModelInfo.js)",
+      "Bash(node src/services/fetchOfficialColors.js)",
+      "Bash(node src/services/convertStores.js)",
+      "Bash(git push origin master)",
+      "Bash(git pull origin master)",
+      "Bash(git commit -m \"解决合并冲突\")",
+      "Bash(git rebase -i 88234a2^)",
+      "Bash(git rebase --abort)",
+      "Bash(git reset --hard 88234a2^)",
+      "Bash(git cherry-pick 88234a2)",
+      "Bash(git rebase -i adadd8f)",
+      "Bash(git push origin master --force)",
+      "Bash(git reset --hard adadd8f)",
+      "Bash(git reset --hard 44169e8)",
+      "Bash(mkdir src/config)",
+      "Bash(git add .gitignore src/main.js src/config/)",
+      "Bash(git checkout ea43407 -- .)",
+      "Bash(git commit -m \"恢复丢失的配置文件和代码修改\")",
+      "WebFetch(domain:www.apple.com.cn)",
+      "WebSearch",
+      "WebFetch(domain:support.apple.com)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

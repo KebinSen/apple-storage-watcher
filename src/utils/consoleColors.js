@@ -1,4 +1,5 @@
-const consoleColors =  {
+// 控制台颜色代码
+const consoleColors = {
   Reset: "\x1b[0m",
   Bright: "\x1b[1m",
   Dim: "\x1b[2m",
@@ -24,6 +25,6 @@ const consoleColors =  {
   BgMagenta: "\x1b[45m",
   BgCyan: "\x1b[46m",
   BgWhite: "\x1b[47m",
-}
+};
 
 module.exports = consoleColors;
